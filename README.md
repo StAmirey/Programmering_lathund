@@ -1,23 +1,3 @@
-<style>
-    h1 {
-        color:orange;
-    }
-    h2 {
-        color:gray;
-    }
-    ol {
-        color:blue;
-    }
-    ul {
-        color:black
-    }
-
-    a:hover {
-        text-decoration: none;
-    }
-    
-</style>
-
 # Programmering
 ##  Lathund för JavaScript och grundläggande programmering
 PS. I kodexemplerna nedan menas ``` >>``` att det efter dessa tecknerna är det som koden på raden ovan get som output
