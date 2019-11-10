@@ -144,7 +144,7 @@ PS. I kodexemplerna nedan menas ``` >>``` att det efter dessa tecknerna är det 
         >>x = 6
 
     function multiply (number1, number2) { return number1*number2 }
-    // Även detta är en funktion fast med två indata värden och inga nya rader - FULT SKRIVET, ANVÄND NYRAD
+    // Även detta är en funktion fast med två argument värden och inga nya rader - FULT SKRIVET, ANVÄND NYRAD
 
     ```
 
