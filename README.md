@@ -215,13 +215,14 @@ PS. I kodexemplerna nedan menas ``` >>``` att det efter dessa tecknerna är det 
     }
     ```
     <br>
-   * HTML kod:
+    * HTML
     ```html
     <button onclick="collectCookie()">Click me</button>
     <button onclick="upgrade()">Upgrade</button>
     <h2 id="upgradeCost">Uppgradering: 20</h2>
     <h1 id="cookies"></h1>
     ```
+    <br>
 
 
 __Saker att lägga till - Exempel__
