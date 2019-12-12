@@ -149,6 +149,16 @@ PS. I kodexemplerna nedan menas ``` >>``` att det efter dessa tecknerna är det 
     ```
 
 1. <span id="IE">__If-else satser__</span>
-    * Används för att göra jämförelser
+    * Används för att göra jämförelser mellan två värden
     * Jämförelserna retunerar alltid sant eller falskt
-    * 
+    * Teckan som används : ==, !=, <, >
+    __Regler__:
+     * Skriv alltid mellanrum mellan tecknet och jämförelse (ex. 1 == 1)
+    * Kod:
+    ```javascript
+    if(1 == 1) {
+        console.log("stämmer")
+    }
+    >> "stämmer"
+    // Kollar om 1 är samma sak som 1, vilket det är 
+    ```
