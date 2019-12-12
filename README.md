@@ -215,7 +215,7 @@ PS. I kodexemplerna nedan menas ``` >>``` att det efter dessa tecknerna är det 
     }
     ```
     <br>
-    * HTML kod:
+   * HTML kod:
     ```html
     <button onclick="collectCookie()">Click me</button>
     <button onclick="upgrade()">Upgrade</button>
