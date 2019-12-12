@@ -11,6 +11,7 @@ PS. I kodexemplerna nedan menas ``` >>``` att det efter dessa tecknerna är det 
         <th><a href="#L">Loggar</a></th>
         <th><a href="#F">Funktioner</a></th>
         <th><a href="#IE">If-else satser</a></th>
+        <th><a href="#UPG">Uppgifter</a></th>
     </tr>
 </table>
 
@@ -151,7 +152,7 @@ PS. I kodexemplerna nedan menas ``` >>``` att det efter dessa tecknerna är det 
 1. <span id="IE">__If-else satser__</span>
     * Används för att göra jämförelser mellan två värden
     * Jämförelserna retunerar alltid sant eller falskt
-    * Teckan som används : ==, !=, <, >
+    * Teckan som används : ==, !=, <, > <br>
     __Regler__:
      * Skriv alltid mellanrum mellan tecknet och jämförelse (ex. 1 == 1)
     * Kod:
@@ -159,6 +160,147 @@ PS. I kodexemplerna nedan menas ``` >>``` att det efter dessa tecknerna är det 
     if(1 == 1) {
         console.log("stämmer")
     }
-    >> "stämmer"
-    // Kollar om 1 är samma sak som 1, vilket det är 
+    >>"stämmer"
+    // Kollar om 1 är samma sak som 1, vilket det är, så det mellan måsvingarna till if-satsen görs
+
+    if(1 == 2) {
+        console.log("sant")
+    }else {
+        console.log("falskt")
+    }
+    >>"falskt"
+    // Kollar om 1 är samma sak som 2, vilket det inte är. Går därmed in i else-satsen (delen) och falskt skrivs ut
+
+    var z = 1
+    if(z == 1) {
+        console.log("sant")
+    }
+    >>"sant"
+    // Sätter variabeln z till 1 & kommar om z är lika med ett, vilket det är. Loggar därmed "sant"
+
+    // Gämförelser
+    if(1 > 0)
+    // Kollar om 1 är större än 0
+    if(1 < 0)
+    // Kollar om 1 är mindre än 0
+    if(1 != 0)
+    // Kollar om 1 INTE är lika med 0
+
     ```
+
+
+
+## UPPGIFTER 
+1. <span id="UPG">__Cookie clicker__</span>
+
+    * JavaScript kod:
+    ```javascript
+    var cookies = 0;
+    var cookiesPerClick = 1;
+    
+    function collectCookie() {
+        cookies = cookies + cookiesPerClick;
+        document.getElementById("cookies").textContent = cookies+"st cookies";
+    }
+
+    function upgrade() {
+        if(cookies >= (20 * cookiesPerClick)) {
+            cookies = cookies - (20 * cookiesPerClick);
+            cookiesPerClick = cookiesPerClick + 1;
+            document.getElementById("cookies").textContent = cookies+"st cookies";
+            document.getElementById("upgradeCost").textContent = "Uppgradering: "+ 20 * cookiesPerClick;
+        }else {
+          alert("Ej råd! du behöver: "+(20 * cookiesPerClick))
+        }
+    }
+    ```
+    <br>
+    * HTML kod:
+    ```html
+    <button onclick="collectCookie()">Click me</button>
+    <button onclick="upgrade()">Upgrade</button>
+    <h2 id="upgradeCost">Uppgradering: 20</h2>
+    <h1 id="cookies"></h1>
+    ```
+
+
+__Saker att lägga till - Exempel__
+* CSS
+    ```css
+    html {
+        background: red; /* Ändra bakgrundens färg*/
+        color: red; /* Ändra textens färg*/
+    }
+    /* Ps. går att byta ut "red" mot valfri färg */
+    button {
+        width: 100px; /* Gör knappen 100 pixlar bred, fler pixlar ger bredare knapp*/
+
+        height: 100px; /* Gör knappen 100 pixlar hög, fler pixlar ger högre knapp*/
+
+        border-radius: 50%; /* Gör knappen helt runt, mindre procent gör den mindre rund*/
+
+        background: red; /* Ändra bakgrundens färg*/
+
+        font-size: 10pt; /* Ändrar text-storlek, öka värdet för större text*/
+
+        border: 2px solid blue; /* Skapar en 2 pixlars blå ram runt hela knappen, ändra gärna färg och antal pixlar*/
+    }
+
+    button:hover {
+        tranform:rotate(180deg); /* Roterar knappen 180 grader när man har musen över den*/
+
+        transform:scale(1.1); /* Gör knappen 10% större när man har musen över den*/
+    }
+
+    button:active {
+        tranform:rotate(180deg); /* Roterar knappen 180 grader när man trycker på den*/
+
+        transform:scale(1.1); /* Gör knappen 10% större när man trycker på den*/
+
+        background: red; /* Gör knappens bakgrund röd när man trycker på den*/
+    }
+    ```
+    Ps. Hitta fler roliga CSS tricks på länk nedan: <br>
+    [CSS - W3 Schools](https://www.w3schools.com/css/)
+    <br>
+* HTML
+    ```html
+    <img onclick="collectCookie()" src="http://www.pngall.com/wp-content/uploads/2016/07/Cookie-Download-PNG.png%22%3E"> <!-- byt ut detta mot knappen för att få en bild på en kaka  -->
+
+    <h1></h1> <!-- Lägg till titlar, finns h1 - h6 beroende på storlek -->
+    <p></p> <!-- Lägg till brödtext, finns även <b></b> & <i></i> för fetstil respektive italic
+    ```
+    <br>
+* JavaScript <br>
+    * Autoclicker: 
+    ```javascript
+    var autoPerClick = 1; // Antal kakor per klick
+    var autoTime = 1000; // Tiden mellan klicken i millisekunder. 1000 millisek = 1 sekund
+    setInterval(function { cookies = cookies + autoPerClick }, autoTime) // Skapar ett interval som ökar "cookies" med autoPerClick varje sekund
+    ```
+    Utvecklar mer?
+        + Lägg till så att man även kan uppgradera både antal kakor per klick & tiden mellan klicken  <br> <br>
+    * Nivå: <br>
+    Ändra om funktionen "collectCookie" till att kolla om nästa nivå är uppfylld
+    ```javascript
+    var level = 0;
+    function collectCookie() {
+        cookies = cookies + cookiesPerClick;
+        document.getElementById("cookies").textContent = cookies+"st cookies";
+        if(cookies > 100) { // Om du har över 100 kakor blir din nivå 1
+            level = 1;
+        }
+        if(cookies > 1000) { // Om du har över 1 000 kakor blir din nivå 2
+            level = 2;
+        }
+        if(cookies > 10000) { // Om du har över 10 000 kakor blir din nivå 3
+            level = 3;
+        }
+    }
+    ```
+    Utvecklar mer?
+        + Lägg gärna till fler nivåer
+        + Ändra så att nivån beror på hur många kakor per klick du har
+## Snötema
+* https://matteraknaren.com/course/snow.scss
+https://matteraknaren.com/course/snow.js
