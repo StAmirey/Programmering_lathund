@@ -265,7 +265,7 @@ __Saker att lägga till - Exempel__
     <br>
 * HTML
     ```html
-    <img onclick="collectCookie()" src="http://www.pngall.com/wp-content/uploads/2016/07/Cookie-Download-PNG.png%22%3E"> <!-- byt ut detta mot knappen för att få en bild på en kaka  -->
+    <img onclick="collectCookie()" src="http://www.pngall.com/wp-content/uploads/2016/07/Cookie-Download-PNG.png"> <!-- byt ut detta mot knappen för att få en bild på en kaka  -->
 
     <h1></h1> <!-- Lägg till titlar, finns h1 - h6 beroende på storlek -->
     <p></p> <!-- Lägg till brödtext, finns även <b></b> & <i></i> för fetstil respektive italic
@@ -277,16 +277,6 @@ __Saker att lägga till - Exempel__
     var autoPerClick = 1; // Antal kakor per klick
     var autoTime = 1000; // Tiden mellan klicken i millisekunder. 1000 millisek = 1 sekund
     setInterval(function() { cookies = cookies + autoPerClick }, autoTime) // Skapar ett interval som ökar "cookies" med autoPerClick varje sekund
-    function upgrade2() {
-    if(cookies >= (20 * autoPerClick)) {
-        cookies = cookies - (20 * autoPerClick);
-        autoPerClick = autoPerClick + 1;
-        document.getElementById("cookies").textContent = cookies+"st cookies";
-        document.getElementById("upgradeCost").textContent = "Uppgradering: "+ 20 * autoPerClick;
-    }else {
-      alert("Ej råd! du behöver: "+(20 * autoPerClick))
-    }
-}
     ```
     Utvecklar mer?
         + Lägg till så att man även kan uppgradera både antal kakor per klick & tiden mellan klicken  <br> <br>
@@ -308,9 +298,6 @@ __Saker att lägga till - Exempel__
         }
     }
     ```
-    ```html
-    <button onclick="upgrade2()">Upgrade 2.0</button>
-    ```
     Utvecklar mer?
         + Lägg gärna till fler nivåer
         + Ändra så att nivån beror på hur många kakor per klick du har
@@ -329,3 +316,15 @@ https://matteraknaren.com/course/snow.js
   <div class="ground"></div>
 </div>
 ```
+
+
+#cookie {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  user-select: none;
+  margin-top:150px;
+  animation:spin 4s linear infinite;
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
