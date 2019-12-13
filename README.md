@@ -277,6 +277,16 @@ __Saker att lägga till - Exempel__
     var autoPerClick = 1; // Antal kakor per klick
     var autoTime = 1000; // Tiden mellan klicken i millisekunder. 1000 millisek = 1 sekund
     setInterval(function() { cookies = cookies + autoPerClick }, autoTime) // Skapar ett interval som ökar "cookies" med autoPerClick varje sekund
+    function upgrade2() {
+    if(cookies >= (20 * autoPerClick)) {
+        cookies = cookies - (20 * autoPerClick);
+        autoPerClick = autoPerClick + 1;
+        document.getElementById("cookies").textContent = cookies+"st cookies";
+        document.getElementById("upgradeCost").textContent = "Uppgradering: "+ 20 * autoPerClick;
+    }else {
+      alert("Ej råd! du behöver: "+(20 * autoPerClick))
+    }
+}
     ```
     Utvecklar mer?
         + Lägg till så att man även kan uppgradera både antal kakor per klick & tiden mellan klicken  <br> <br>
@@ -297,6 +307,9 @@ __Saker att lägga till - Exempel__
             level = 3;
         }
     }
+    ```
+    ```html
+    <button onclick="upgrade2()">Upgrade 2.0</button>
     ```
     Utvecklar mer?
         + Lägg gärna till fler nivåer
