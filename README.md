@@ -304,3 +304,13 @@ __Saker att lägga till - Exempel__
 ## Snötema
 * https://matteraknaren.com/course/snow.scss
 https://matteraknaren.com/course/snow.js
+
+
+<div class="content">
+  <canvas id="snow" class="snow" width="100%" height="100%">
+  </canvas>
+  <img onclick="collectCookie()" id="cookie" src="http://www.pngall.com/wp-content/uploads/2016/07/Cookie-Download-PNG.png">
+  <span id="cookies"></span>
+  <button onclick="upgrade()"> UPPGRADERA</button>
+  <div class="ground"></div>
+</div>
