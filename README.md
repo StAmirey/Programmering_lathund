@@ -276,7 +276,7 @@ __Saker att lägga till - Exempel__
     ```javascript
     var autoPerClick = 1; // Antal kakor per klick
     var autoTime = 1000; // Tiden mellan klicken i millisekunder. 1000 millisek = 1 sekund
-    setInterval(function { cookies = cookies + autoPerClick }, autoTime) // Skapar ett interval som ökar "cookies" med autoPerClick varje sekund
+    setInterval(function() { cookies = cookies + autoPerClick }, autoTime) // Skapar ett interval som ökar "cookies" med autoPerClick varje sekund
     ```
     Utvecklar mer?
         + Lägg till så att man även kan uppgradera både antal kakor per klick & tiden mellan klicken  <br> <br>
